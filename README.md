@@ -18,7 +18,7 @@ The merged file will be written to the current workin directory as `merged.igc`.
 ## Building
 ```bash
 # With go
-go mod tidy
+go get
 go build .
 
 # Using ko
