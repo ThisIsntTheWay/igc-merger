@@ -1,0 +1,21 @@
+name: go-build
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '*.go'
+      - 'go.*'
+
+jobs:
+  golangci:
+    name: lint
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: 'go.mod'
+
+      - uses: ko-build/setup-ko@v0.7
+      - run: ko build
