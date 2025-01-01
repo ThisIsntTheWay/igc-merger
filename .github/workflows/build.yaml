@@ -18,4 +18,4 @@ jobs:
           go-version-file: 'go.mod'
 
       - uses: ko-build/setup-ko@v0.7
-      - run: ko build
+      - run: ko build --base-import-paths
