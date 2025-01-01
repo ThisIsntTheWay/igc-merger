@@ -8,8 +8,8 @@ on:
       - 'go.*'
 
 jobs:
-  golangci:
-    name: lint
+  build:
+    name: build and publish
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
