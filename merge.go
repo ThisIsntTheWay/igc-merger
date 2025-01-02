@@ -88,7 +88,7 @@ func sortBRecords(recordsArray []string) {
 	}
 
 	sort.Slice(bRecords, func(i, j int) bool {
-		return bRecords[i].Timestamp > bRecords[j].Timestamp
+		return bRecords[i].Timestamp < bRecords[j].Timestamp
 	})
 
 	for i, bRecord := range bRecords {
